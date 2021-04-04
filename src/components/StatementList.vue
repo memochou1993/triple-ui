@@ -2,7 +2,6 @@
   <v-list
     two-line
   >
-    <v-list-item-group>
       <template
         v-for="(statement, index) in statements"
       >
@@ -41,7 +40,6 @@
           :key="`divider-${index}`"
         />
       </template>
-    </v-list-item-group>
   </v-list>
 </template>
 

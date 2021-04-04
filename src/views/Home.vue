@@ -2,30 +2,15 @@
   <v-card
     v-if="resource"
   >
-    <v-card-title
-      class="headline indigo white--text"
-    >
-      <v-row
-        class="text-center"
-      >
-        <v-col
-          cols="12"
-        >
-          <span
-            v-text="resource.name"
-          />
-        </v-col>
-      </v-row>
-    </v-card-title>
     <v-card-text
-      class="pa-4"
+      class="pa-3"
     >
       <v-row
         justify="space-between"
       >
         <v-col
-          cols="6"
-          class="body-1 text-center py-0"
+          cols="4"
+          class="body-1 text-center px-2 py-0"
         >
           <StatementList
             :statements="subjectStatements"
@@ -36,8 +21,32 @@
           vertical
         />
         <v-col
-          cols="6"
-          class="body-1 text-center py-0"
+          cols="4"
+          class="body-1 text-center px-2 py-0"
+        >
+          <v-list
+            two-line
+          >
+            <v-list-item
+              :ripple="false"
+              :inactive="true"
+            >
+              <v-list-item-content
+                class="text-center"
+              >
+                <span
+                  v-text="`${resource.name}`"
+                />
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+        </v-col>
+        <v-divider
+          vertical
+        />
+        <v-col
+          cols="4"
+          class="body-1 text-center px-2 py-0"
         >
           <StatementList
             :statements="objectStatements"
